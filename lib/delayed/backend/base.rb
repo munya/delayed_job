@@ -17,6 +17,7 @@ module Delayed
           if args.size > 0
             warn "[DEPRECATION] Passing multiple arguments to `#enqueue` is deprecated. Pass a hash with :priority and :run_at."
             options[:priority] = args.first || options[:priority]
+            options[:unique_key] = options[:unique_key]
             options[:run_at]   = args[1]
           end
 
@@ -136,6 +137,14 @@ module Delayed
       def set_default_run_at
         self.run_at ||= self.class.db_time_now
       end
+      
+      def check_unique_key
+        return true
+        # return true unless payload_object.respond_to?(:unique_key) || payload_object.unique_key.blank?
+        # return false
+      # rescue UniqueKeyError
+        # do nothing  
+      end  
 
       # Call during reload operation to clear out internal state
       def reset
