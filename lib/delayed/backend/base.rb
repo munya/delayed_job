@@ -139,11 +139,8 @@ module Delayed
       end
       
       def check_unique_key
-        return true
-        # return true unless payload_object.respond_to?(:unique_key) || payload_object.unique_key.blank?
-        # return false
-      # rescue UniqueKeyError
-        # do nothing  
+        return true if !self.respond_to?(:unique_key) || self.unique_key.blank?
+        self.class.where(:unique_key => self.unique_key, :locked_at => nil).first.nil?
       end  
 
       # Call during reload operation to clear out internal state
