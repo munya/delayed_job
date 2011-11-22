@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name              = 'delayed_job_uniq_key'
+  s.name              = 'delayed_job_unique_key'
   s.version           = '0.0.1'
   s.authors           = ["Matt Griffin", "Brian Ryckbost", "Steve Richert", "Chris Gaffney", "Brandon Keepers", "Tobias L\303\274tke", "Oleg Muntyan"]
   s.summary           = 'Database-backed asynchronous priority queue system -- Extracted from Shopify'
