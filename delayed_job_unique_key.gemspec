@@ -3,12 +3,12 @@
 Gem::Specification.new do |s|
   s.name              = 'delayed_job_uniq_key'
   s.version           = '0.0.1'
-  s.authors           = ["Matt Griffin", "Brian Ryckbost", "Steve Richert", "Chris Gaffney", "Brandon Keepers", "Tobias L\303\274tke"]
+  s.authors           = ["Matt Griffin", "Brian Ryckbost", "Steve Richert", "Chris Gaffney", "Brandon Keepers", "Tobias L\303\274tke", "Oleg Muntyan"]
   s.summary           = 'Database-backed asynchronous priority queue system -- Extracted from Shopify'
-  s.description       = "Delayed_job (or DJ) encapsulates the common pattern of asynchronously executing longer tasks in the background. It is a direct extraction from Shopify where the job table is responsible for a multitude of core tasks.
+  s.description       = "This fork allows to prevent creating new job if already exists not running one with unique key
 
 This gem is collectiveidea's fork (http://github.com/collectiveidea/delayed_job)."
-  s.email             = ['chris@collectiveidea.com', 'brandon@opensoul.org']
+  s.email             = ['chris@collectiveidea.com', 'brandon@opensoul.org', 'omuntyan@gmail.com']
   s.extra_rdoc_files  = 'README.textile'
   s.files             = Dir.glob('{contrib,lib,recipes,spec}/**/*') +
                         %w(MIT-LICENSE README.textile)
