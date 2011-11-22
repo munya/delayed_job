@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name              = 'delayed_job_unique_key'
-  s.version           = '0.0.2'
+  s.version           = '0.0.3'
   s.authors           = ["Matt Griffin", "Brian Ryckbost", "Steve Richert", "Chris Gaffney", "Brandon Keepers", "Tobias L\303\274tke", "Oleg Muntyan"]
   s.summary           = 'Database-backed asynchronous priority queue system -- Extracted from Shopify'
   s.description       = "This fork allows to prevent creating new job if already exists not running one with unique key
@@ -17,7 +17,7 @@ This gem is collectiveidea's fork (http://github.com/collectiveidea/delayed_job)
   s.require_paths     = ["lib"]
   s.test_files        = Dir.glob('spec/**/*')
 
-  s.add_runtime_dependency      'daemons',        '~> 1.0.10'
+  s.add_runtime_dependency      'daemons',        '>= 1.0.10'
   s.add_runtime_dependency      'activesupport',  '~> 3.0'
 
   s.add_development_dependency  'activerecord',   '~> 3.0'
