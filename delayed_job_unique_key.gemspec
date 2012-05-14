@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name              = 'delayed_job_unique_key'
-  s.version           = '0.0.3'
+  s.version           = '0.0.4'
   s.authors           = ["Matt Griffin", "Brian Ryckbost", "Steve Richert", "Chris Gaffney", "Brandon Keepers", "Tobias L\303\274tke", "Oleg Muntyan"]
   s.summary           = 'Database-backed asynchronous priority queue system -- Extracted from Shopify'
   s.description       = "This fork allows to prevent creating new job if already exists not running one with unique key
